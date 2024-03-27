@@ -1,0 +1,47 @@
+.elements {
+  max-width: 880px;
+  margin: 0 auto 61px;
+}
+
+.elements__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 282px);
+  gap: 20px 17px;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.elements__card-photo {
+  max-width: 282px;
+  max-width: 282px;
+  border-radius: 10px 10px 0 0;
+}
+
+.elements__caption {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  padding: 25px 20px;
+}
+
+.elements__like-button {
+  color: #fff;
+  background-color: #fff;
+}
+
+.elements__like-button:hover {
+  opacity: 50%;
+}
+
+.elements__card-text {
+  color: black;
+  font-family: Inter, Arial, sans-serif /*Import Inter font */;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29.05px;
+  text-overflow: ellipsis;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}

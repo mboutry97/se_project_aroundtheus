@@ -1,0 +1,67 @@
+.profile {
+  display: flex;
+  max-width: 880px;
+  height: 120px;
+  justify-content: space-between;
+  margin: 40px auto 51px;
+  align-items: center;
+}
+
+.profile__info {
+  display: flex;
+}
+
+.profile__picture {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+}
+
+.profile__text {
+  margin: auto 0 auto 30px;
+}
+
+.profile__name-edit {
+  display: flex;
+  align-items: center;
+}
+
+.profile__name {
+  margin: 0 0 7px;
+  font-family: Inter, Arial, sans-serif /*Import Inter font */;
+  font-size: 42px;
+  line-height: 48px;
+  font-weight: 500;
+}
+
+.profile__subtext {
+  font-family: Inter, Arial, sans-serif /*Import Inter font */;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.78px;
+  margin: 7px 0 0;
+}
+
+.profile__edit-button {
+  background: url(../images/edit_button.svg) center no-repeat;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #fff;
+  margin-left: 9px;
+}
+
+.profile__edit-button:hover {
+  opacity: 60%;
+}
+
+.profile__button {
+  background: url(../images/plus_sign.svg) center no-repeat;
+  width: 150px;
+  height: 50px;
+  border: 2px solid #fff;
+  /* border needs to be 2px but disappears when I add it - Done */
+}
+
+.profile__button:hover {
+  opacity: 50%;
+}
