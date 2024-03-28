@@ -21,21 +21,3 @@
   font-display: swap;
   src: url("./fonts/Inter-Black.woff2") format("woff2");
 }
-
-.inter__400 {
-  font-family: "Inter", Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.inter__500 {
-  font-family: "Inter", Arial, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.inter__900 {
-  font-family: "Inter", Arial, sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}

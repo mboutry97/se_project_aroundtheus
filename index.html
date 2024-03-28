@@ -11,9 +11,7 @@
     <meta name="author" content="Max Boutry" />
     <link rel="stylesheet" href="pages/index.css" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>Document</title>
+    <title>Across the US</title>
   </head>
   <body>
     <div class="page">
@@ -24,101 +22,135 @@
           class="header__logo"
         />
       </header>
-      <section class="profile">
-        <div class="profile__info">
-          <!-- div created to space between profile pic, name and add button-->
-          <img
-            src="images/jacques-cousteau.png"
-            alt="Profile pic of jacques-cousteau"
-            class="profile__picture"
-          />
-          <div class="profile__text">
-            <!-- div created to have  column of text-->
-            <div class="profile__name-edit">
-              <!-- div created to center edit button next to profile name-->
-              <h1 class="profile__name">Jacques Cousteau</h1>
-              <button class="profile__edit-button" type="submit"></button>
-            </div>
-            <p class="profile__subtext">Explorer</p>
-          </div>
-        </div>
-        <button class="profile__button" type="submit"></button>
-      </section>
-      <section class="elements">
-        <div class="elements__cards">
-          <div class="element__card">
+      <main class="main">
+        <section class="profile">
+          <div class="profile__info">
+            <!-- div created to space between profile pic, name and add button-->
             <img
-              src="images/yosemite-valley.jpg"
-              alt="Yosemite"
-              class="elements__card-photo"
+              src="images/jacques-cousteau.png"
+              alt="Profile pic of jacques-cousteau"
+              class="profile__picture"
             />
-            <div class="elements__caption">
-              <p class="elements__card-text">Yosemite Valley</p>
-              <button class="elements__like-button" type="submit"></button>
+            <div class="profile__text">
+              <!-- div created to have  column of text-->
+              <div class="profile__name-edit">
+                <!-- div created to center edit button next to profile name-->
+                <h1 class="profile__name">Jacques Cousteau</h1>
+                <button
+                  class="profile__edit-button"
+                  type="button"
+                  aria-label="edit"
+                ></button>
+              </div>
+              <p class="profile__subtext">Explorer</p>
             </div>
           </div>
-          <div class="element__card">
-            <img
-              src="images/lake-louise.png"
-              alt="Lake Louise"
-              class="elements__card-photo"
-            />
-            <div class="elements__caption">
-              <p class="elements__card-text">Lake Louise</p>
-              <button class="elements__like-button" type="submit"></button>
-            </div>
-          </div>
-          <div class="element__card">
-            <img
-              src="images/bald-mountains.png"
-              alt="Bald Mountains"
-              class="elements__card-photo"
-            />
-            <div class="elements__caption">
-              <p class="elements__card-text">Bald Mountains</p>
-              <button class="elements__like-button" type="submit"></button>
-              <!-- <img
+          <button
+            class="profile__button"
+            type="button"
+            aria-label="add"
+          ></button>
+        </section>
+        <section class="elements">
+          <div class="elements__cards">
+            <article class="elements__card">
+              <img
+                src="images/yosemite-valley.jpg"
+                alt="Yosemite"
+                class="elements__card-photo"
+              />
+              <div class="elements__caption">
+                <h2 class="elements__card-text">Yosemite Valley</h2>
+                <button
+                  class="elements__like-button"
+                  type="button"
+                  aria-label="like"
+                ></button>
+              </div>
+            </article>
+            <article class="elements__card">
+              <img
+                src="images/lake-louise.png"
+                alt="Lake Louise"
+                class="elements__card-photo"
+              />
+              <div class="elements__caption">
+                <h2 class="elements__card-text">Lake Louise</h2>
+                <button
+                  class="elements__like-button"
+                  type="button"
+                  aria-label="like"
+                ></button>
+              </div>
+            </article>
+            <article class="elements__card">
+              <img
+                src="images/bald-mountains.png"
+                alt="Bald Mountains"
+                class="elements__card-photo"
+              />
+              <div class="elements__caption">
+                <h2 class="elements__card-text">Bald Mountains</h2>
+                <button
+                  class="elements__like-button"
+                  type="button"
+                  aria-label="like"
+                ></button>
+                <!-- <img
                 src="images/heart.svg"
                 alt="Like icon"
                 class="elements__like-button"
               /> -->
-            </div>
+              </div>
+            </article>
+            <article class="elements__card">
+              <img
+                src="images/latemar.png"
+                alt="Latemar"
+                class="elements__card-photo"
+              />
+              <div class="elements__caption">
+                <h2 class="elements__card-text">Latemar</h2>
+                <button
+                  class="elements__like-button"
+                  type="button"
+                  aria-label="like"
+                ></button>
+              </div>
+            </article>
+            <article class="elements__card">
+              <img
+                src="images/vanoise-national-park.png"
+                alt="Vanoise National Park"
+                class="elements__card-photo"
+              />
+              <div class="elements__caption">
+                <h2 class="elements__card-text">Vanoise National Park</h2>
+                <button
+                  class="elements__like-button"
+                  type="button"
+                  aria-label="like"
+                ></button>
+              </div>
+            </article>
+            <article class="elements__card">
+              <img
+                src="images/lago-di-braies.png"
+                alt="Lago di Braies"
+                class="elements__card-photo"
+              />
+              <div class="elements__caption">
+                <h2 class="elements__card-text">Lago di Braies</h2>
+                <button
+                  class="elements__like-button"
+                  type="button"
+                  aria-label="like"
+                ></button>
+              </div>
+            </article>
           </div>
-          <div class="element__card">
-            <img
-              src="images/latemar.png"
-              alt="Latemar"
-              class="elements__card-photo"
-            />
-            <div class="elements__caption">
-              <p class="elements__card-text">Latemar</p>
-              <button class="elements__like-button" type="submit"></button>
-            </div>
-          </div>
-          <div class="element__card">
-            <img
-              src="images/vanoise-national-park.png"
-              alt="Vanoise National Park"
-              class="elements__card-photo"
-            />
-            <div class="elements__caption">
-              <p class="elements__card-text">Vanoise National Park</p>
-              <button class="elements__like-button" type="submit"></button>
-            </div>
-          </div>
-          <div class="element__card">
-            <img
-              src="images/lago-di-braies.png"
-              alt="Lago di Braies"
-              class="elements__card-photo"
-            />
-            <div class="elements__caption">
-              <p class="elements__card-text">Lago di Braies</p>
-              <button class="elements__like-button" type="submit"></button>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
       <footer class="footer">
         <p class="footer__text">© 2024 Around the US</p>
       </footer>
