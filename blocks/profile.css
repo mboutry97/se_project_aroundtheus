@@ -98,7 +98,7 @@
   .profile__name {
     margin: 0 auto;
     line-height: 26.63px;
-
+    max-width: 250px;
     font-size: 22px;
   }
 
@@ -112,6 +112,7 @@
     margin: 14px auto 36px;
     font-size: 14px;
     line-height: 16.94px;
+    max-width: 250px;
   }
 
   .profile__button {
