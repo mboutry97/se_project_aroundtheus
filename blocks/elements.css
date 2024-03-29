@@ -33,6 +33,7 @@
   height: 18px;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .elements__like-button:hover {
@@ -52,7 +53,7 @@
   max-width: 221px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 710px) {
   .elements {
     margin: 36px auto 48px;
   }
