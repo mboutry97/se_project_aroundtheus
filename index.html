@@ -40,6 +40,7 @@
                   class="profile__edit-button"
                   type="button"
                   aria-label="edit"
+                  id="profile-edit-button"
                 ></button>
               </div>
               <p class="profile__subtext">Explorer</p>
@@ -155,9 +156,9 @@
         <p class="footer__text">© 2024 Around the US</p>
       </footer>
     </div>
-    <div class="modal modal_opened">
+    <div class="modal modal_opened" id="profile-edit-modal">
       <div class="modal__container">
-        <button class="modal__close"></button>
+        <button class="modal__close" id="profile-close-edit-modal"></button>
         <h2 class="modal__heading">Edit Profile</h2>
         <form class="modal__form">
           <input
