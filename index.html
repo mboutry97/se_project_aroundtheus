@@ -35,7 +35,9 @@
               <!-- div created to have  column of text-->
               <div class="profile__name-edit">
                 <!-- div created to center edit button next to profile name-->
-                <h1 class="profile__name">Jacques Cousteau</h1>
+                <h1 class="profile__name" id="profile-name">
+                  Jacques Cousteau
+                </h1>
                 <button
                   class="profile__edit-button"
                   type="button"
@@ -43,7 +45,7 @@
                   id="profile-edit-button"
                 ></button>
               </div>
-              <p class="profile__subtext">Explorer</p>
+              <p class="profile__subtext" id="profile-description">Explorer</p>
             </div>
           </div>
           <button
@@ -53,102 +55,25 @@
           ></button>
         </section>
         <section class="elements">
-          <div class="elements__cards">
-            <article class="elements__card">
-              <img
-                src="images/yosemite-valley.jpg"
-                alt="Yosemite"
-                class="elements__card-photo"
-              />
-              <div class="elements__caption">
-                <h2 class="elements__card-text">Yosemite Valley</h2>
-                <button
-                  class="elements__like-button"
-                  type="button"
-                  aria-label="like"
-                ></button>
-              </div>
-            </article>
-            <article class="elements__card">
-              <img
-                src="images/lake-louise.png"
-                alt="Lake Louise"
-                class="elements__card-photo"
-              />
-              <div class="elements__caption">
-                <h2 class="elements__card-text">Lake Louise</h2>
-                <button
-                  class="elements__like-button"
-                  type="button"
-                  aria-label="like"
-                ></button>
-              </div>
-            </article>
-            <article class="elements__card">
-              <img
-                src="images/bald-mountains.png"
-                alt="Bald Mountains"
-                class="elements__card-photo"
-              />
-              <div class="elements__caption">
-                <h2 class="elements__card-text">Bald Mountains</h2>
-                <button
-                  class="elements__like-button"
-                  type="button"
-                  aria-label="like"
-                ></button>
-                <!-- <img
-                src="images/heart.svg"
-                alt="Like icon"
-                class="elements__like-button"
-              /> -->
-              </div>
-            </article>
-            <article class="elements__card">
-              <img
-                src="images/latemar.png"
-                alt="Latemar"
-                class="elements__card-photo"
-              />
-              <div class="elements__caption">
-                <h2 class="elements__card-text">Latemar</h2>
-                <button
-                  class="elements__like-button"
-                  type="button"
-                  aria-label="like"
-                ></button>
-              </div>
-            </article>
-            <article class="elements__card">
-              <img
-                src="images/vanoise-national-park.png"
-                alt="Vanoise National Park"
-                class="elements__card-photo"
-              />
-              <div class="elements__caption">
-                <h2 class="elements__card-text">Vanoise National Park</h2>
-                <button
-                  class="elements__like-button"
-                  type="button"
-                  aria-label="like"
-                ></button>
-              </div>
-            </article>
-            <article class="elements__card">
-              <img
-                src="images/lago-di-braies.png"
-                alt="Lago di Braies"
-                class="elements__card-photo"
-              />
-              <div class="elements__caption">
-                <h2 class="elements__card-text">Lago di Braies</h2>
-                <button
-                  class="elements__like-button"
-                  type="button"
-                  aria-label="like"
-                ></button>
-              </div>
-            </article>
+          <div class="elements__cards" id="cards-list">
+            <template id="card-template">
+              <article class="elements__card">
+                <img
+                  src=""
+                  alt=""
+                  class="elements__card-photo"
+                  id="card-image"
+                />
+                <div class="elements__caption">
+                  <h2 class="elements__card-text" id="card-title"></h2>
+                  <button
+                    class="elements__like-button"
+                    type="button"
+                    aria-label="like"
+                  ></button>
+                </div>
+              </article>
+            </template>
           </div>
         </section>
       </main>
@@ -156,7 +81,7 @@
         <p class="footer__text">© 2024 Around the US</p>
       </footer>
     </div>
-    <div class="modal modal_opened" id="profile-edit-modal">
+    <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
         <button class="modal__close" id="profile-close-edit-modal"></button>
         <h2 class="modal__heading">Edit Profile</h2>
@@ -165,15 +90,25 @@
             type="text"
             name="name"
             class="modal__form-input"
-            placeholder="Jacques Cousteau"
+            placeholder="Name"
+            id="profile-name-input"
           />
+          <!--Remove placeholder-->
           <input
             type="text"
             name="description"
             class="modal__form-input"
             placeholder="Explorer"
+            id="profile-description-input"
           />
-          <button class="modal__button" type="submit">Save</button>
+          <!--Remove placeholder-->
+          <button
+            class="modal__button"
+            type="submit"
+            id="profile-edit-modal-save"
+          >
+            Save
+          </button>
         </form>
       </div>
     </div>
