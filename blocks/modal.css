@@ -75,6 +75,11 @@
   border-top: none;
   border-right: none;
   border-left: none;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.94px;
+  color: #000;
 }
 
 .modal__form-input:last-of-type {

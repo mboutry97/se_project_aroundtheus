@@ -1,4 +1,4 @@
-let initialCards = [
+const initialCards = [
   {
     name: "Yosemite Valley",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
@@ -38,9 +38,7 @@ const profileNameInput = document.querySelector("#profile-name-input");
 const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
-const profileEditModalSaveButton = document.querySelector(
-  "#profile-edit-modal-save"
-);
+const profileEditModalSaveButton = document.querySelector("#profile-edit-form");
 const cardListEl = document.querySelector("#cards-list");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
@@ -71,11 +69,12 @@ profileEditButton.addEventListener("click", function () {
   profileEditModal.classList.add("modal_opened"); /* Making modal visible */
 });
 
-profileCloseEditModalButton.addEventListener("click", () => {
-  profileEditModal.classList.remove("modal_opened");
-}); /* Making modal invisible */
+profileCloseEditModalButton.addEventListener(
+  "click",
+  closePopup
+); /* Making modal invisible */
 
-profileEditModalSaveButton.addEventListener("click", function (event) {
+profileEditModalSaveButton.addEventListener("submit", function (event) {
   profileName.textContent =
     profileNameInput.value; /* Making the input apply to name */
   profileDescription.textContent =
