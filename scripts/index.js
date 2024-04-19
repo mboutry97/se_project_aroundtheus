@@ -38,7 +38,7 @@ const profileNameInput = document.querySelector("#profile-name-input");
 const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
-const profileEditModalSaveButton = document.querySelector("#profile-edit-form");
+const profileEditModalForm = document.querySelector("#profile-edit-form");
 const cardListEl = document.querySelector("#cards-list");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
@@ -74,7 +74,7 @@ profileCloseEditModalButton.addEventListener(
   closePopup
 ); /* Making modal invisible */
 
-profileEditModalSaveButton.addEventListener("submit", function (event) {
+profileEditModalForm.addEventListener("submit", function (event) {
   profileName.textContent =
     profileNameInput.value; /* Making the input apply to name */
   profileDescription.textContent =
