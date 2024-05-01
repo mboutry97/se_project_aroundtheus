@@ -3,6 +3,10 @@
   margin: 0 auto 67px;
 }
 
+.elements__card {
+  position: relative;
+}
+
 .elements__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, 282px);
@@ -42,6 +46,11 @@
   opacity: 50%;
 }
 
+.elements__like-button_activated {
+  /* Make the like button activated and dark */
+  background-image: url(../images/like_activated.svg);
+}
+
 .elements__card-text {
   color: black;
   font-family: Inter, Arial, sans-serif /*Import Inter font */;
@@ -53,6 +62,23 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 221px;
+}
+
+.elements__delete-button {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  background-image: url(../images/trash.svg);
+  z-index: 2;
+  width: 18px;
+  height: 19.3px;
+}
+
+.elements__delete-button:hover {
+  opacity: 60%;
 }
 
 @media screen and (max-width: 710px) {
