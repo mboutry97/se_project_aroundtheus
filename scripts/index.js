@@ -125,15 +125,16 @@ addCardButton.addEventListener("click", function () {
 });
 /*use submit form to close instead of clicking create button */
 addCardForm.addEventListener("submit", function (event) {
-  let newCardData = {
+  const newCardData = {
     name: "",
     link: "",
   };
   newCardData.name = newCardTitleInput.value;
   newCardData.link = newCardImageLinkInput.value;
-  let cardElement = getCardElement(newCardData);
+  const cardElement = getCardElement(newCardData);
   cardListEl.prepend(cardElement);
   closePopup(addCardModal);
+  event.target.reset();
   event.preventDefault();
 });
 
