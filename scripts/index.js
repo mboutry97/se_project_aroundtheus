@@ -24,7 +24,7 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
   },
 ];
-console.log(initialCards);
+// console.log(initialCards);
 
 /* ----------------------- Elements ----------------------- */
 const profileEditButton = document.querySelector("#profile-edit-button");
@@ -63,6 +63,10 @@ function closePopup(modal) {
 
 function openPopup(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", (modal) => {
+    closeModalEscape(modal);
+  });
+  document.addEventListener("click", closeModalOverlayClick);
 }
 
 function getCardElement(cardData) {
@@ -89,6 +93,20 @@ function getCardElement(cardData) {
   });
   /* Add image alt text according to name of image */
   return cardElement;
+}
+
+function closeModalEscape(event) {
+  if (event.key === "Escape") {
+    const openModal = document.querySelector(".modal_opened");
+    closePopup(openModal);
+  }
+}
+
+function closeModalOverlayClick(event) {
+  const openModal = document.querySelector(".modal_opened");
+  if (event.target === openModal) {
+    closePopup(openModal);
+  }
 }
 
 /* ----------------------- Event Listeners ----------------------- */

@@ -100,15 +100,26 @@
             class="modal__form-input"
             placeholder="Name"
             id="profile-name-input"
+            required
+            minlength="2"
+            maxlength="40"
           />
+          <span class="modal__form-error" id="profile-name-input-error"></span>
           <!--Remove placeholder-->
           <input
             type="text"
             name="description"
             class="modal__form-input"
-            placeholder="Explorer"
+            placeholder="Description"
             id="profile-description-input"
+            required
+            minlength="2"
+            maxlength="200"
           />
+          <span
+            class="modal__form-error"
+            id="profile-description-input-error"
+          ></span>
           <!--Remove placeholder-->
           <button
             class="modal__button"
@@ -129,23 +140,35 @@
           <input
             type="text"
             name="name"
-            class="modal__form-input"
+            class="modal__form-input modal__form-input-error"
             placeholder="Title"
             id="profile-title-input"
+            required
+            minlength="1"
+            maxlength="30"
           />
+          <span class="modal__form-error" id="profile-title-input-error"></span>
           <!--Remove placeholder-->
           <input
             type="text"
             name="description"
-            class="modal__form-input"
+            class="modal__form-input modal__form-input-error"
             placeholder="Image link"
             id="profile-image-link-input"
+            type="url"
+            pattern="https?://.+"
+            required
           />
+          <span
+            class="modal__form-error"
+            id="profile-image-link-input-error"
+          ></span>
           <!--Remove placeholder-->
           <button
-            class="modal__button"
+            class="modal__button modal__button_disabled"
             type="submit"
             id="create-new-card-button"
+            disabled
           >
             Create
           </button>
@@ -161,5 +184,7 @@
       </div>
     </div>
     <script src="./scripts/index.js"></script>
+    <!-- Validation JS (must be added after index.js) -->
+    <script src="./scripts/validation.js"></script>
   </body>
 </html>
