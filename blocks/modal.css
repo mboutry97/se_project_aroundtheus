@@ -27,6 +27,7 @@
   position: relative;
   max-width: 430px;
   width: 100%;
+  max-height: 341.54px;
 }
 
 .modal__container_transparent-bg {
@@ -89,6 +90,9 @@
   background-color: #fff;
   opacity: 20%;
   cursor: pointer;
+  position: relative;
+  bottom: 36.51px;
+  margin: 48px 36px;
 }
 
 .modal__form-input {
@@ -135,6 +139,7 @@
   margin: 0 36px;
   overflow-wrap: break-word;
   max-width: 358px;
+  display: block;
 }
 
 .modal__image {

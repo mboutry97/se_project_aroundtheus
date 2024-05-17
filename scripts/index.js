@@ -56,17 +56,17 @@ const closePreviewModalButton = document.querySelector("#close-preview-modal");
 const modalPreviewImage = document.querySelector("#preview-image-modal");
 const modalImageCaption = document.querySelector("#modal-image-caption");
 const enlargedImage = document.querySelector("#enlarged-image");
+
+const popups = document.querySelectorAll(".modal");
 /* ----------------------- Functions ----------------------- */
 function closePopup(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", closeModalEscape);
 }
 
 function openPopup(modal) {
   modal.classList.add("modal_opened");
-  document.addEventListener("keydown", (modal) => {
-    closeModalEscape(modal);
-  });
-  document.addEventListener("click", closeModalOverlayClick);
+  document.addEventListener("keydown", closeModalEscape);
 }
 
 function getCardElement(cardData) {
@@ -102,12 +102,11 @@ function closeModalEscape(event) {
   }
 }
 
-function closeModalOverlayClick(event) {
-  const openModal = document.querySelector(".modal_opened");
-  if (event.target === openModal) {
-    closePopup(openModal);
-  }
-}
+//function closeModalOverlayClick(event) {
+//  if (event.target.classList.contains("modal_opened")) {
+//    closePopup(event.target);
+//  }
+// }
 
 /* ----------------------- Event Listeners ----------------------- */
 profileEditButton.addEventListener("click", function () {
@@ -119,9 +118,20 @@ profileEditButton.addEventListener("click", function () {
   openPopup(profileEditModal); /* Making modal visible */
 });
 
-profileCloseEditModalButton.addEventListener("click", () => {
+/* profileCloseEditModalButton.addEventListener("click", () => {
   closePopup(profileEditModal);
 }); /* Making modal invisible */
+
+popups.forEach((popup) => {
+  popup.addEventListener("mousedown", (evt) => {
+    if (evt.target.classList.contains("modal_opened")) {
+      closePopup(popup);
+    }
+    if (evt.target.classList.contains("modal__close")) {
+      closePopup(popup);
+    }
+  });
+});
 
 profileEditModalForm.addEventListener("submit", function (event) {
   profileName.textContent =
