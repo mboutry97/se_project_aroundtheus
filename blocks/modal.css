@@ -90,8 +90,6 @@
   background-color: #fff;
   opacity: 20%;
   cursor: pointer;
-  position: relative;
-  bottom: 36.51px;
   margin: 48px 36px;
 }
 
@@ -120,7 +118,6 @@
   border-top: none;
   border-right: none;
   border-left: none;
-  margin-bottom: 0;
 }
 
 .modal__form-input::placeholder {
@@ -140,6 +137,12 @@
   overflow-wrap: break-word;
   max-width: 358px;
   display: block;
+  position: absolute;
+  top: 150px;
+}
+
+.modal__form-error:last-of-type {
+  top: 210px;
 }
 
 .modal__image {

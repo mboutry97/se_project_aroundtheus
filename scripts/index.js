@@ -165,11 +165,3 @@ addCardForm.addEventListener("submit", function (event) {
   event.target.reset();
   event.preventDefault();
 });
-
-closeAddCardButton.addEventListener("click", () => {
-  closePopup(addCardModal);
-});
-
-closePreviewModalButton.addEventListener("click", () => {
-  closePopup(previewImageModal);
-});
