@@ -51,10 +51,10 @@ class FormValidator {
   // Private method to change state of submit button
   _toggleButtonState() {
     if (hasInvalidInput(this._inputEls)) {
-      _disableButton();
+      this._disableButton();
       return;
     }
-    _enableButton();
+    this._enableButton();
   }
 
   _setEventListeners() {
