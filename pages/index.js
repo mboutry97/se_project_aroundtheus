@@ -215,7 +215,7 @@ addCardForm.addEventListener("submit", function (event) {
 function renderCard(cardData) {
   const newCard = new Card(cardData, "#card-template", handleImageClick);
   const newCardElement = newCard.getView();
-  cardListEl.append(newCardElement);
+  cardListEl.prepend(newCardElement);
 }
 
 initialCards.forEach((cardData) => {

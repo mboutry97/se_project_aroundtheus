@@ -50,7 +50,7 @@ class FormValidator {
   // Private method to check validity
   // Private method to change state of submit button
   _toggleButtonState() {
-    if (hasInvalidInput(this._inputEls)) {
+    if (this._hasInvalidInput(this._inputEls)) {
       this._disableButton();
       return;
     }
