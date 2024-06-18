@@ -41,11 +41,10 @@ class Card {
   }
 
   _populateCard() {
-    const cardImageEl = this._element.querySelector("#card-image");
     const cardTitleEl = this._element.querySelector("#card-title");
     cardTitleEl.textContent = this._name;
-    cardImageEl.setAttribute("src", this._link);
-    cardImageEl.setAttribute("alt", this._name);
+    this._imageElement.setAttribute("src", this._link);
+    this._imageElement.setAttribute("alt", this._name);
   }
 
   getView() {

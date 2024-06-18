@@ -130,7 +130,6 @@ profileEditModalForm.addEventListener("submit", function (event) {
 
 /* add an event listener to open up the new card-adding modal when clicking button*/
 addCardButton.addEventListener("click", function () {
-  addFormValidator._disableButton();
   openPopup(addCardModal);
 });
 /*use submit form to close instead of clicking create button */
@@ -160,5 +159,6 @@ addCardForm.addEventListener("submit", function (event) {
   renderCard(newCardData);
   closePopup(addCardModal);
   event.target.reset();
+  addFormValidator.disableButton();
   event.preventDefault();
 });
