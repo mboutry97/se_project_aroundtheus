@@ -1,6 +1,3 @@
-const enlargedImage = document.querySelector("#enlarged-image");
-const modalImageCaption = document.querySelector("#modal-image-caption");
-
 class Card {
   constructor(data, cardSelector, handleImageClick) {
     this._name = data.name;
@@ -10,28 +7,26 @@ class Card {
   }
 
   _setEventListeners() {
-    const likeButton = this._element.querySelector("#card-like-button");
-    const deleteButton = this._element.querySelector("#card-delete-button");
-    const imageElement = this._element.querySelector("#card-image");
+    this._likeButton = this._element.querySelector("#card-like-button");
+    this._deleteButton = this._element.querySelector("#card-delete-button");
+    this._imageElement = this._element.querySelector("#card-image");
 
-    likeButton.addEventListener("click", () => {
+    this._likeButton.addEventListener("click", () => {
       this._handleLikeButton();
     });
 
-    deleteButton.addEventListener("click", () => {
+    this._deleteButton.addEventListener("click", () => {
       this._handleDeleteButton();
     });
 
     // For image handler:
-    imageElement.addEventListener("click", () => {
+    this._imageElement.addEventListener("click", () => {
       this._handleImageClick(this._name, this._link);
     });
   }
 
   _handleLikeButton() {
-    this._element
-      .querySelector("#card-like-button")
-      .classList.toggle("elements__like-button_activated");
+    this._likeButton.classList.toggle("elements__like-button_activated");
   }
 
   _handleDeleteButton() {
